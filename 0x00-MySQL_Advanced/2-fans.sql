@@ -8,4 +8,4 @@
 
 -- Context: Calculate/compute something is always power intensive… better to distribute the load!
 
-SELECT * 
+SELECT origin, fans AS nb_fans FROM metal_bands;
