@@ -8,7 +8,7 @@
 -- Context: Write code in SQL is a nice level up!
 
 DELIMITER //
-CREATE PROCEDURE IF NOT EXISTS AddBonus(
+CREATE PROCEDURE AddBonus(
 	IN user_id INT,
 	IN project_name VARCHAR(255),
 	IN score INT
