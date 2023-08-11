@@ -8,4 +8,7 @@
 --    Your script can be executed on any database
  
 
-SELECT band_name, IF(split < 0, 0, 2022 - formed) AS lifespan FROM  metal_bands WHERE style LIKE '%Glam rock%' ORDER BY lifespan DESC;
+SELECT band_name, IFNULL(split, 2022) - IFNULL(formed, 0) AS lifespan
+FROM  metal_bands
+WHERE style LIKE '%Glam rock%'
+ORDER BY lifespan DESC;
