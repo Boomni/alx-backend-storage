@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Insert a document in Python """
+"""Update document topics in Python """
 
 
 def update_topics(mongo_collection, name, topics):
@@ -13,7 +13,4 @@ def update_topics(mongo_collection, name, topics):
     topics (list of strings) will be the list of topics
     approached in the school
     """
-    mongo_collection.update_many(
-            {"name": name},
-            {"$set": {"topic": topics}}
-            )
+    mongo_collection.update_many({"name": name}, {"$set": {"topics": topics}})
